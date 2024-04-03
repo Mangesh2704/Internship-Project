@@ -1,0 +1,31 @@
+@media screen and (max-width: 400px) {
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  #about,
+  #services,
+  #testimonials,
+  #team,
+  #contact,
+  #footer {
+    width: 111%;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
+}
+
+.icon-img {
+  width: 25px; 
+  height: 25px; 
+  margin-right: 10px; 
+  vertical-align: middle;
+}
+
+.blue-text {
+  color: blue; 
+  font-family: 'Poppins', sans-serif !important; 
+  font-weight:500 !important;
+}
