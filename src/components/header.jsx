@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Signup from "./signup"; // Import the component you want to navigate to
-// import Login from "./login"; // Import the login component
 
 export const Header = (props) => {
   const [showSignup, setShowSignup] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
 
+  // Function to handle join us button click
   const handleJoinUsClick = () => {
-    // Toggle between showing signup and login components
-    setShowSignup(!showSignup);
-    setShowLogin(false); // Make sure login is hidden
-  };
-
-  const handleLoginClick = () => {
-    // Toggle between showing login and signup components
-    setShowLogin(!showLogin);
-    setShowSignup(false); // Make sure signup is hidden
+    // Set showSignup to true to render the Signup component
+    setShowSignup(true);
   };
 
   return (
@@ -48,27 +41,19 @@ export const Header = (props) => {
                   <span></span>
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                {/* Use the handleJoinUsClick function as onClick event handler */}
-                <button
-                  className="btn btn-custom btn-lg page-scroll"
-                  onClick={handleJoinUsClick}
-                >
+                {/* Use the Link component to redirect to Signup page */}
+                <Link to="/signup" className="btn btn-custom btn-lg page-scroll">
                   Join Us
-                </button>
-                {/* <button
-                  className="btn btn-custom btn-lg page-scroll"
-                  onClick={handleLoginClick}
-                >
-                  Login
-                </button> */}
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Conditionally render the Signup and Login components */}
+      {/* Conditionally render the Signup component */}
       {showSignup && <Signup />}
-      {/* {showLogin && <Login />} */}
     </header>
   );
 };
+
+export default Header;

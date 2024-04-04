@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
-// import { Navigation } from "./components/navigation";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from './components/navigation'; 
-import { Header }  from "./components/header";
+import { Header } from "./components/header";
 import Artist from './components/artist';
 import { About } from "./components/about";
 import { Contact } from "./components/contact";
+import Signup from "./components/signup";
+import Login from "./components/login";
+import Aboutus from "./components/Aboutus";
+import Connect from "./components/connect";
+import Create from "./components/create";
+import MySpace from "./components/myspace";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
@@ -16,19 +22,37 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
   return (
-    <div>
-      <Navigation />
-      <Header data={landingPageData.Header} />
-      <About data={landingPageData.About} />
-      <Artist data = {landingPageData.Artist} />
-      <Contact data={landingPageData.Contact} />
-    </div>
+    <Router>
+      <div>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home landingPageData={landingPageData} />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/Aboutus" element={<Aboutus />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/myspace" element={<MySpace />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 };
+
+const Home = ({ landingPageData }) => (
+  <>
+    <Header data={landingPageData.Header} />
+    <About data={landingPageData.About} />
+    <Artist data={landingPageData.Artist} />
+    <Contact data={landingPageData.Contact} />
+  </>
+);
 
 export default App;

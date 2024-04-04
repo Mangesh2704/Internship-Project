@@ -1,35 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
+import "../App.css"; 
 
-const Signup = () => {
-  const [name, setName] = useState("");
+const Login = () => {
+  // State variables for email and password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Name:", name);
+    // Check email and password here
     console.log("Email:", email);
     console.log("Password:", password);
+    // Add your authentication logic here
   };
 
   return (
-    <div className="signup-container">
-      <form onSubmit={handleSubmit} className="signup-form">
-        <h2 className="signup-heading">Sign Up</h2>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="form-control"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
+    <div className="login-container">
+      <form onSubmit={handleSubmit} className="login-form">
+        <h2 className="login-heading">Login</h2>
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -55,14 +45,14 @@ const Signup = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary btn-block">
-          Sign Up
+          Login
         </button>
         <br />
-        <span>Already registered? </span>
-        <Link to="/login">Login</Link>
+        <span>Not registered yet? </span>
+        <Link to="/signup">Sign Up</Link>
       </form>
     </div>
   );
 };
 
-export default Signup;
+export default Login;
