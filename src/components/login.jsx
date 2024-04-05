@@ -16,7 +16,7 @@ const Login = () => {
     axios.post("http://localhost:3000/login", { email, password })
       .then((res) => {
         console.log(res);
-        if(res.data == "Success"){
+        if(res.data === "Success"){
         navigate('/dashbaord')
         }
       })

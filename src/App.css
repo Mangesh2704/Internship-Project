@@ -133,3 +133,74 @@
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
+/* Connect Page */
+
+.question-box {
+  background-color: #f0f0f0;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.question-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.question-content {
+  font-size: 18px;
+}
+
+/* Input field styles */
+.answer-input {
+  width: calc(75% - 200px); /* Adjust as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Answer label styles */
+.answer-label {
+  margin-right: 10px;
+}
+
+/* Like button styles */
+.like-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Submit button styles */
+.submit-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Label styles */
+.answer-label {
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color:  black;
+}

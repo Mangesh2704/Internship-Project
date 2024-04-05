@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import Signup from "./signup"; // Import the component you want to navigate to
+import { Link } from "react-router-dom"; 
+import Signup from "./signup";
 
 export const Header = (props) => {
   const [showSignup, setShowSignup] = useState(false);
