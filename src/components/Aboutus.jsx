@@ -44,7 +44,7 @@ const About = () => {
           </div>
           <div className="col-xs-12 col-md-6">
           <br/>
-            <h3>John Doe</h3>
+            <h3>Art Therapy Benefits</h3>
             <p>John Doe is a contemporary visual artist known for his striking use of color and innovative mixed-media techniques. Born and raised in a small town, John discovered his passion for art at a young age and pursued formal training at the prestigious Art Institute. His works often explore themes of identity, nature, and the human experience, reflecting his diverse cultural influences and personal journey.</p>
            
               {/* <p>{props.data ? props.data.paragraph : "loading..."}</p> */}
@@ -70,7 +70,45 @@ const About = () => {
           </div>
         </div>
       )}
-      </div>  
+      <br />
+      <br />
+      <div className="container">
+        <div className="row">
+        <div className="about-text">
+        <h2 style={{ fontSize: "2.5rem" }}>Art Therapy Benefits</h2>
+          <div className="col-xs-12 col-md-6">
+            {" "}
+            <img src="img/art therapy infographic.png  " className="img-responsive" alt="" />{" "}
+          </div>
+          <div className="col-xs-12 col-md-6">
+          <br/>
+            <h3>Art Therapy Benefits are:</h3>
+            <p>John Doe is a contemporary visual artist known for his striking use of color and innovative mixed-media techniques. Born and raised in a small town, John discovered his passion for art at a young age and pursued formal training at the prestigious Art Institute. His works often explore themes of identity, nature, and the human experience, reflecting his diverse cultural influences and personal journey.</p>
+           
+              {/* <p>{props.data ? props.data.paragraph : "loading..."}</p> */}
+              <h3>Notable Achievements:</h3>
+              <p><li>Winner of the 2023 Contemporary Artist Award.</li>
+                <li>Featured in numerous solo and group exhibitions across the country. </li>
+                <li>His artwork has been collected by private collectors and art enthusiasts worldwide.</li></p>
+              <h3>Current Projects:</h3>
+              <p>John is currently working on a series of large-scale canvases exploring the theme of environmental conservation. Through his art, he aims to raise awareness about pressing environmental issues and inspire positive change in society.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={toggleModal}>&times;</span>
+            <h2>Artist of the Month</h2>
+            <img src="img/john.png" alt="" />
+            <h3>John Doe</h3>
+            <p>Full bio of the Artist of the Month...</p>
+            {/* Additional details about the artist */}
+          </div>
+        </div>
+      )}
+      </div>    
   );
 };
 
