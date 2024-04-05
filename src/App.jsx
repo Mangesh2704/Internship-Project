@@ -15,6 +15,10 @@ import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
+<<<<<<< HEAD
+import AfterLogin from "./components/AfterLogin";
+=======
+>>>>>>> de50c183e7ba712caba187a73ad264de455dc47c
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -41,6 +45,10 @@ const App = () => {
           <Route path="/create" element={<Create />} />
           <Route path="/myspace" element={<MySpace />} />
           <Route path="/dashbaord" element={<Dashboard />} />
+<<<<<<< HEAD
+          <Route path="/afterlogin" element={<AfterLogin />} />
+=======
+>>>>>>> de50c183e7ba712caba187a73ad264de455dc47c
           {/* Add more routes as needed */}
         </Routes>
       </div>

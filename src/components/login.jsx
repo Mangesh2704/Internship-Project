@@ -16,8 +16,13 @@ const Login = () => {
     axios.post("http://localhost:3000/login", { email, password })
       .then((res) => {
         console.log(res);
+<<<<<<< HEAD
+        if(res.data === "Success"){
+        navigate('/afterlogin')
+=======
         if(res.data == "Success"){
         navigate('/dashbaord')
+>>>>>>> de50c183e7ba712caba187a73ad264de455dc47c
         }
       })
       .catch((err) => {
