@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import axios from "axios";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -9,6 +10,10 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.post('http://localhost:3000/signup',{name,email,password})
+    .then(result => console.log(result)
+    )
+    .catch(err => console.log(err))
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Password:", password);

@@ -1,15 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css"; 
+import axios from "axios";
+import {useNavigate} from 'react-router-dom';
 
 const Login = () => {
   // State variables for email and password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.post("http://localhost:3000/login", { email, password })
+      .then((res) => {
+        console.log(res);
+        if(res.data === "Success"){
+        navigate('/afterlogin')
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     // Check email and password here
     console.log("Email:", email);
     console.log("Password:", password);

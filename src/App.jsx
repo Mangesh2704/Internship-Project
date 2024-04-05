@@ -14,6 +14,8 @@ import MySpace from "./components/myspace";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import Dashboard from "./components/Dashboard";
+import AfterLogin from "./components/AfterLogin";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -39,6 +41,8 @@ const App = () => {
           <Route path="/connect" element={<Connect />} />
           <Route path="/create" element={<Create />} />
           <Route path="/myspace" element={<MySpace />} />
+          <Route path="/dashbaord" element={<Dashboard />} />
+          <Route path="/afterlogin" element={<AfterLogin />} />
           {/* Add more routes as needed */}
         </Routes>
       </div>
