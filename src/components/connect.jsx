@@ -49,10 +49,11 @@ const Connect = () => {
     <div id="connect">
       <div className="container">
         <div className="row justify-content-center">
+        <h2 className="text-center with-pseudo-element">About Us</h2>
           <div className="col-md-8">
             <div className="about-text text-center">
               <br /><br />
-              <h2 className="with-pseudo-element">
+              <h2 className="with-pseudo-element" style={{ marginLeft: "350px" }}>
                 Connect With Us
               </h2>
               {/* Image */}
